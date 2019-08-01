@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 const port = 8000;
+
+//use static files from asset folder
+app.use(express.static('./assets'));
 //use express router
 app.use('/', require('./routes'));
 
