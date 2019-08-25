@@ -65,11 +65,11 @@
                         </button>
                         <ul id="task-list">
                             <% for(let task of tasks){ %>
-                                <li class="single-task">
+                                <li class="single-task" id="li-<%= task._id %>">
                                     <div class="single-task-div">
                                         <div class="checkbox-description-div">
                                             <div class="checkbox-div">
-                                                <input type="checkbox" name="<%= task._id %>">
+                                                <input type="checkbox" name="<%= task._id %>" id="input-<%= task._id %>">
                                             </div>
                                             <div class="description-date-div">
                                                 <p><%= task.description %></p>
@@ -90,5 +90,7 @@
                 </div>
             </div>
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="/js/home.js"></script>
     </body>
 </html>

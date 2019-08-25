@@ -136,4 +136,7 @@ body{
     color: white;
     padding: 10px;
 }
+.checked-task{
+    text-decoration: line-through;
+}
 
