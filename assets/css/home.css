@@ -138,14 +138,27 @@ body{
     width: 20%;
     height: auto;
     text-align: center;
-    background-color: cornflowerblue;
     color: white;
     padding: 10px;
 }
 .checked-task{
     text-decoration: line-through;
 }
-
+.category-PERSONAL{
+    background-color: cornflowerblue;
+}
+.category-WORK{
+    background-color: paleturquoise;
+}
+.category-SCHOOL{
+    background-color: coral
+}
+.category-CLEANING{
+    background-color: mediumorchid;
+}
+.category-OTHER{
+    background-color: slategrey;
+}
 
  
 
