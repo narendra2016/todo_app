@@ -1,4 +1,5 @@
 const Task = require('../models/task');
+
 //add task
 module.exports.add = function(req, res){
     Task.create({
@@ -12,4 +13,14 @@ module.exports.add = function(req, res){
         }
         return res.redirect('back');
     });
+};
+
+//delete tasks
+module.exports.delete = async function(req, res){
+    var keys = Object.keys(req.body);
+    async function deleteTask(id){
+        await Task.findByIdAndDelete(id);
+    }
+    keys.forEach(deleteTask)
+    return res.redirect('back');
 };

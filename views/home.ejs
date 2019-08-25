@@ -23,39 +23,67 @@
                 <h1 id="heading">TODO App</h1>
             </div>
             <div id="add-delete-task">
-                <form action="/tasks/add" method="POST" id="add-task-form">
-                    <div id="description">
-                        <p>DESCRIPTION</p>
-                        <input type="text" name="description" placeholder="What do you need to do?">
-                    </div>
-                    <div id="category-and-date">
-                        <div id="category">
-                            <p>CATEGORY</p>
-                            <select name="category" id="task-category">
-                                <option value="" disabled selected>Choose a category</option>
-                                <option value="PERSONAL">Personal</option>
-                                <option value="WORK">Work</option>
-                                <option value="SCHOOL">School</option>
-                                <option value="CLEANING">Cleaning</option>
-                                <option value="OTHER">Other</option>
-                            </select>
+                <div id="add-task-div">
+                    <form action="/tasks/add" method="POST" id="add-task-form">
+                        <div id="description">
+                            <p>DESCRIPTION</p>
+                            <input type="text" name="description" placeholder="What do you need to do?" required>
                         </div>
-                        <div id="due-date">
-                            <p>DUE DATE</p>
-                            <input type="text" id="datepicker" placeholder="mm/dd/yyyy" name="dueDate">   
+                        <div id="category-and-date">
+                            <div id="category">
+                                <p>CATEGORY</p>
+                                <select name="category" id="task-category" required>
+                                    <option value="" disabled selected>Choose a category</option>
+                                    <option value="PERSONAL">Personal</option>
+                                    <option value="WORK">Work</option>
+                                    <option value="SCHOOL">School</option>
+                                    <option value="CLEANING">Cleaning</option>
+                                    <option value="OTHER">Other</option>
+                                </select>
+                            </div>
+                            <div id="due-date">
+                                <p>DUE DATE</p>
+                                <input type="text" id="datepicker" placeholder="mm/dd/yyyy" name="dueDate" required>   
+                            </div>
                         </div>
-                    </div>
-                    <button type="submit" id="add-task-button">
-                        <i class="fas fa-plus"></i>
-                        <span>ADD TASK</span>
-                    </button>
-                </form>
-                <button id="delete-task-button">
-                    <i class="fas fa-trash-alt"></i>
-                    <span>DELETE TASKS</span>
-                </button>
+                        <button type="submit" id="add-task-button">
+                            <i class="fas fa-plus"></i>
+                            <span>ADD TASK</span>
+                        </button>
+                    </form>
+                </div>
+                <div id="delete-task-div">
+                    <form action="/tasks/delete" method="POST" id="delete-task-form">
+                        <button id="delete-task-button" type="submit">
+                            <i class="fas fa-trash-alt"></i>
+                            <span>DELETE TASKS</span>
+                        </button>
+                        <ul id="task-list">
+                            <% for(let task of tasks){ %>
+                                <li class="single-task">
+                                    <div class="single-task-div">
+                                        <div class="checkbox-description-div">
+                                            <div class="checkbox-div">
+                                                <input type="checkbox" name="<%= task._id %>">
+                                            </div>
+                                            <div class="description-date-div">
+                                                <p><%= task.description %></p>
+                                                <p>
+                                                    <i class="fal fa-calendar-alt"></i>
+                                                    <span><%= task.dueDate %></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="category-div">
+                                            <%= task.category %>
+                                        </div>
+                                    </div>
+                                </li>
+                            <% } %>
+                        </ul>
+                    </form>
+                </div>
             </div>
-
         </div>
     </body>
 </html>
