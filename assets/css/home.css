@@ -142,7 +142,7 @@ body{
     padding: 10px;
 }
 .checked-task{
-    text-decoration: line-through;
+    text-decoration: line-through gray;
 }
 .category-PERSONAL{
     background-color: cornflowerblue;
