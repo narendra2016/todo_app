@@ -1,0 +1,139 @@
+body{
+    font-family: sans-serif;
+    background-color: lightgrey;
+    width: 100%;
+}
+#app-container{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    left: 20%;
+    background-color: white;
+}
+#heading-container{
+    width: 100%;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: #94928b;
+    border-bottom: 1px solid #d1cec5;
+}
+#heading{
+    margin-bottom: 0;
+}
+#add-delete-task-container{
+    width: 100%;
+}
+#add-task-div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#add-task-form p{
+    margin: 5px;
+    margin-left: 10px;
+    color: #94928b;
+}
+#add-task-form input[type = text]{
+    border: none;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    color: #94928b;
+}
+#task-category{
+    border: none;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #94928b;
+}
+#datepicker{
+    font-weight: bold;
+}
+#description{
+    font-weight: bold;
+    border-bottom: 1px solid #d1cec5;
+}
+
+#category-and-date{
+    font-weight: bold;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #d1cec5;
+}
+#category{
+    flex-grow: 1;
+    border-right: 1px solid #d1cec5;
+}
+#due-date{
+    flex-grow: 1;
+}
+#add-task-button{
+    height: 50px;
+    font-size: 1.5rem;
+    color: white;
+    border: none;
+    background-color: #636360;
+    position: relative;
+    left: 25%;
+}
+#delete-task-div{
+    display: inline-block;
+    width: 90%;
+}
+#delete-task-button{
+    display: inline-block;
+    height: 50px;
+    font-size: 1.5rem;
+    color: white;
+    border: none;
+    background-color: orangered;
+    position: relative;
+    top: -65px;
+    left: 50%;
+}
+#task-list{
+    margin-top: 0;
+    list-style: none;
+    width: 100%;
+    position: relative;
+    left: 3%;
+    top: -20px;
+}
+
+.single-task{
+    width: 100%;
+    padding: 10px;
+    border-top: 1px solid #d1cec5;
+    border-bottom: 1px solid #d1cec5;
+}
+.single-task-div{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+}
+.checkbox-description-div{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    color: #94928b;
+}
+
+.description-date-div p{
+    margin:0;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+.category-div{
+    width: 20%;
+    height: auto;
+    text-align: center;
+    background-color: cornflowerblue;
+    color: white;
+    padding: 10px;
+}
+

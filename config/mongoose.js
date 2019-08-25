@@ -1,3 +1,4 @@
+//set up the mongodb database
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/todo_app_db_development');
 const db = mongoose.connection;
