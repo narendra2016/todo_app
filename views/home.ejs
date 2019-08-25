@@ -1,11 +1,61 @@
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>
             <%= title %>
         </title>
+        <script src="https://kit.fontawesome.com/7a033f1c1b.js"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            $( function() {
+                $( "#datepicker" ).datepicker();
+            } );
+        </script>
     </head>
 
     <body>
-        <h1>TODO App</h1>
+        <div id="app-container">
+            <div id="heading-container">
+                <h1 id="heading">TODO App</h1>
+            </div>
+            <div id="add-delete-task">
+                <form action="/tasks/add" method="POST" id="add-task-form">
+                    <div id="description">
+                        <p>DESCRIPTION</p>
+                        <input type="text" name="description" placeholder="What do you need to do?">
+                    </div>
+                    <div id="category-and-date">
+                        <div id="category">
+                            <p>CATEGORY</p>
+                            <select name="category" id="task-category">
+                                <option value="" disabled selected>Choose a category</option>
+                                <option value="PERSONAL">Personal</option>
+                                <option value="WORK">Work</option>
+                                <option value="SCHOOL">School</option>
+                                <option value="CLEANING">Cleaning</option>
+                                <option value="OTHER">Other</option>
+                            </select>
+                        </div>
+                        <div id="due-date">
+                            <p>DUE DATE</p>
+                            <input type="text" id="datepicker" placeholder="mm/dd/yyyy" name="dueDate">   
+                        </div>
+                    </div>
+                    <button type="submit" id="add-task-button">
+                        <i class="fas fa-plus"></i>
+                        <span>ADD TASK</span>
+                    </button>
+                </form>
+                <button id="delete-task-button">
+                    <i class="fas fa-trash-alt"></i>
+                    <span>DELETE TASKS</span>
+                </button>
+            </div>
+
+        </div>
     </body>
 </html>
