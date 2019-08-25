@@ -8,7 +8,8 @@ module.exports.add = function(req, res){
     Task.create({
         description: req.body.description,
         category: req.body.category,
-        dueDate: req.body.dueDate
+        dueDate: req.body.dueDate,
+        date: req.body.dueDate
     }, function(err, newTask){
         if(err){
             console.log('error in adding the task');

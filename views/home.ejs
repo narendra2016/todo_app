@@ -6,20 +6,10 @@
             <%= title %>
         </title>
         <script src="https://kit.fontawesome.com/7a033f1c1b.js"></script>        <!--to use font awesome icons library-->
-        <!--to use jquery ui date picker-->
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <link rel="stylesheet" href="/resources/demos/style.css">
         <!--linking stylesheet-->
         <link rel="stylesheet"  href="/css/home.css">
         <!--to use jquery ui date picker-->
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <!--script for jquery date picker-->
-        <script>
-            $( function() {
-                $( "#datepicker" ).datepicker();
-            } );
-        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
 
     <body>
@@ -48,7 +38,7 @@
                             </div>
                             <div id="due-date">
                                 <p>DUE DATE</p>
-                                <input type="text" id="datepicker" placeholder="mm/dd/yyyy" name="dueDate" required>   
+                                <input type="date" name="dueDate" required id="due-date-input">   
                             </div>
                         </div>
                         <button type="submit" id="add-task-button">
@@ -90,7 +80,6 @@
                 </div>
             </div>
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="/js/home.js"></script>
     </body>
 </html>

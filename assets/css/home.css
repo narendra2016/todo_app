@@ -48,9 +48,7 @@ body{
     font-weight: bold;
     color: #94928b;
 }
-#datepicker{
-    font-weight: bold;
-}
+
 #description{
     font-weight: bold;
     border-bottom: 1px solid #d1cec5;
@@ -71,6 +69,14 @@ body{
 #due-date{
     flex-grow: 1;
 }
+
+#due-date-input{
+    font-weight: bold;
+    color: #94928b;
+    border: none;
+    margin-left: 10px;
+}
+
 #add-task-button{
     height: 50px;
     font-size: 1.5rem;
@@ -139,4 +145,7 @@ body{
 .checked-task{
     text-decoration: line-through;
 }
+
+
+ 
 

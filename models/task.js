@@ -14,7 +14,15 @@ const taskSchema = mongoose.Schema({
     dueDate: {
         type: String,
         required: true
+    },
+
+    date: {
+        type: String,
+        required: true
     }
+
+}, {
+    timestamps: true
 });
 //Now the collection
 const Task = mongoose.model('Task', taskSchema);
